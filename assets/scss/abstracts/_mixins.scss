@@ -1,0 +1,14 @@
+
+@mixin flex($justify,$item) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $item;
+}
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax($val,1fr));
+}
+
+
+

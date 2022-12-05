@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+.subscribe{
+  background: url('../images/letter-bg.png') no-repeat center center/cover;
+  padding: 6rem 0;
+  h2{
+    margin-bottom: 0
+  }
+  &__content{
+    text-align: center;
+  }
+  &__desc{
+    color: $gray;
+    font-size: 1.6rem;
+    padding: 2rem 0;
+  }
+
+  &__field{
+    max-width: 65rem;
+    box-shadow: $box-shadow;
+    border-radius: 2.5rem;
+    @include flex(center,center);
+    height: 5rem;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  &__input{
+    width: 100%;
+    height: 100%;
+    padding:0 2rem;
+    font-size: 1.6rem;
+    color: $black;
+    text-transform: capitalize;
+  }
+  &__btn{
+    height: 100%;
+  }
+}

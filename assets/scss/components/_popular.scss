@@ -1,0 +1,54 @@
+@use "../abstracts" as *;
+
+.vehicles {
+  padding: 2rem 0;
+
+  &__card {
+    text-align: center;
+  }
+  &__content {
+    transform: scale(0);
+  }
+  &__img {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  &__title {
+    font-size: 2.4rem;
+    color: $black;
+  }
+  &__price {
+    font-size: 1.7rem;
+    color: $gray;
+    border-bottom: $border;
+    padding: 1rem 0;
+    span {
+      color: $yellow;
+      margin-left: 0.5rem;
+      font-size: 2.4rem;
+    }
+  }
+  &__list {
+    @include flex(center, center);
+    flex-wrap: wrap;
+    padding: 1.2rem 0;
+  }
+  &__item {
+    font-size: 1.7rem;
+    color: $gray;
+    i {
+      color: $yellow;
+      margin: 0 0.8rem;
+      font-size: 1rem;
+    }
+  }
+  .swiper-slide-active {
+    .vehicles__img {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .vehicles__content {
+      transform: scale(1);
+    }
+  }
+}

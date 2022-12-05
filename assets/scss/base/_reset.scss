@@ -1,0 +1,63 @@
+@use "../abstracts" as *;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s linear;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+  overflow-x: hidden;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+i {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  display: inline-block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+input:focus,textarea:focus{
+  border-color: $yellow;
+}
+ .swiper{
+ padding-bottom: 5rem;
+ }
+
+.swiper-pagination-bullet-active{
+  background: $yellow;
+}
+
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}

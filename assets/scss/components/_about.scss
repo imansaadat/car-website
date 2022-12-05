@@ -1,0 +1,45 @@
+@use '../abstracts' as *;
+
+.about{
+  background-color: $light-gray;
+  padding: 6rem 0;
+  .boxes{
+    @include grid(26rem);
+    gap: 1.5rem;
+  }
+  .box{
+    background-color: #fff;
+    border: $border;
+    box-shadow: $box-shadow;
+    @include flex(flex-start,center);
+    gap: 1.5rem;
+    padding: 2rem;;
+    i{
+      @include flex(center,center);
+      width: 6rem;
+      height: 6rem;
+      font-size: 2.5rem;
+      background-color: #eee;
+      color: $black;
+      border-radius: 50%;
+      cursor:auto;
+    }
+    &__number{
+      font-size: 2.6rem;
+      color: $yellow;
+    }
+    &__text{
+      font-size: 1.8rem;
+      color: $gray;
+    }
+    &:hover{
+      background-color: $black;
+      i{
+        background-color: $yellow;
+      }
+      p,h3{
+        color: #fff;
+      }
+    }
+  }
+}

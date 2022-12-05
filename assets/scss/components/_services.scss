@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.services{
+  padding: 6rem 0;
+  .cards{
+    @include grid(32rem);
+    gap: 1.5rem;
+  }
+  .card{
+    text-align: center;
+    border: $border;
+    box-shadow: $box-shadow;
+    padding: 2rem;
+    border-radius: .5rem;
+    i{
+      width: 8rem;
+      height: 8rem;
+      line-height: 8rem;
+      font-size: 3.5rem;
+      background-color: $yellow;
+      color: $black;
+      border-radius: 50%;
+    }
+
+    &__title{
+      margin: 1.8rem 0;
+      color: $black;
+      font-size: 2.2rem;
+      text-transform: capitalize;
+    }
+
+    &__desc{
+       margin-bottom: 1.8rem;
+       color: $gray;
+       font-size: 1.5rem;
+    }
+    &:hover{
+      background-color: $black;
+      .card__desc,.card__title{
+        color: #fff;
+      }
+    }
+  }
+}

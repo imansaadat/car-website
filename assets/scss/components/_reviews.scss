@@ -1,0 +1,49 @@
+@use "../abstracts" as *;
+
+.reviews {
+  padding: 4rem 0;
+
+  .review {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    opacity: 0.5;
+    transform: scale(0.9);
+    border:.1rem solid transparent;
+    &__content {
+      text-align: center;
+    }
+    &__name {
+      margin-bottom: 0.5rem;
+      color: $black;
+      font-size: 2.2rem;
+    }
+    &__text {
+      padding: 1.2rem 0;
+      color: $gray;
+      font-size: 1.4rem;
+    }
+    &__img {
+      width: 6.5rem;
+      height: 6.5rem;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    &__stars {
+      i {
+        color: $yellow;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .swiper .swiper-slide{
+    padding: 0 .2rem;
+  }
+  .swiper-slide-active {
+    .review {
+      opacity: 1;
+      transform: scale(1);
+      box-shadow: $box-shadow;
+      border: $border;
+    }
+  }
+}

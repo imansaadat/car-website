@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+.showcase {
+  padding-top: 6rem;
+  text-align: center;
+  overflow-x: hidden;
+
+  &__content {
+    padding: 5rem 0;
+  }
+  &__title {
+    font-size: clamp(2.8rem, 5.5vw, 7rem);
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    color: $black;
+  }
+  &__btn {
+    margin-top: 2rem;
+  }
+  &__img{
+    width: 100%;
+  }
+}

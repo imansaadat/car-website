@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!-- Css File -->
+    <link rel="stylesheet" href="assets/scss/main.css" />
+    <title>maxwheels</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__menu">
+            <i class="fas fa-bars"></i>
+          </div>
+          <a href="#" class="nav__logo"><span>max</span>wheels</a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#vehicles" class="nav__link">vehicles</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#featured" class="nav__link">featured</a>
+            </li>
+            <li class="nav__item">
+              <a href="#reviews" class="nav__link">reviews</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">contact</a>
+            </li>
+          </ul>
+          <div class="nav__login">
+            <button class="btn">Login</button>
+            <i class="far fa-user"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Login Forms -->
+    <div class="login">
+      <div id="close" class="login__close-icon">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="login__content">
+        <h4 class="login__title">user login</h4>
+        <form action="#">
+          <div class="login__field">
+            <input type="email" class="login__input" placeholder="Email" />
+          </div>
+          <div class="login__field">
+            <input
+              type="password"
+              class="login__input"
+              placeholder="Password"
+            />
+          </div>
+          <div class="login__field">
+            <p>Forget Your Password <a href="#">Click Here</a></p>
+          </div>
+          <div class="login__field">
+            <input type="submit" value="Login" class="login__btn btn" />
+          </div>
+          <div class="login__field">
+            <p>Or Login With</p>
+          </div>
+          <div class="login__btns">
+            <a href="#" class="btn">Google</a>
+            <a href="#" class="btn">Facebook</a>
+          </div>
+          <div class="login__field">
+            <p>Don't Have An Account <a href="#">Create One</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- main page -->
+    <main>
+      <!-- Showcase -->
+      <section id="home" class="showcase">
+        <div class="container">
+          <div class="showcase__content">
+            <h2 data-speed="-2" class="showcase__title showcase-parallax">
+              find your car
+            </h2>
+            <img
+              data-speed="5"
+              class="showcase__img showcase-parallax"
+              src="assets/images/home-img.png"
+              alt=""
+            />
+            <a data-speed="7" href="#" class="showcase__btn btn home-parallax"
+              >explore cars</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- About -->
+      <section id="about" class="about">
+        <div class="container">
+          <div
+            x-data="{ boxes: [
+              { id: 1, text: 'Branches',num:'120+',img:'fas fa-home'},
+              { id: 2, text: 'Cars Sold',num:'770+',img:'fas fa-car'},
+              { id: 3, text: 'Happy Clients',num:'520+',img:'fas fa-users'},
+              { id: 4, text:'News Cars',num:'100+',img:'fas fa-car'},
+           ]}"
+            class="boxes"
+          >
+            <template x-for="box in boxes" :key="box.id">
+              <div class="box">
+                <i :class="box.img"></i>
+                <div class="box__content">
+                  <h3 x-text="box.num" class="box__number"></h3>
+                  <p x-text="box.text" class="box__text"></p>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+      <!-- Popular Vehicles -->
+      <section id="vehicles" class="vehicles">
+        <div class="container">
+          <h2 class="heading">Popular <span>Vehicles</span></h2>
+          <div class="swiper vehicles-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="vehicles__card">
+                  <img
+                    src="assets/images/vehicle-1.png"
+                    class="vehicles__img"
+                    alt=""
+                  />
+                  <div class="vehicles__content">
+                    <h3 class="vehicles__title">new model</h3>
+                    <div class="vehicles__price">
+                      price :<span>$62,000</span>
+                    </div>
+                    <ul class="vehicles__list">
+                      <li class="vehicles__item">
+                        new<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        2021<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        automatic<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        petrol<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        183mph<i class="fas fa-circle"></i>
+                      </li>
+                    </ul>
+                    <a href="#" class="btn">check out</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="vehicles__card">
+                  <img
+                    src="assets/images/vehicle-2.png"
+                    class="vehicles__img"
+                    alt=""
+                  />
+                  <div class="vehicles__content">
+                    <h3 class="vehicles__title">new model</h3>
+                    <div class="vehicles__price">
+                      price :<span>$62,000</span>
+                    </div>
+                    <ul class="vehicles__list">
+                      <li class="vehicles__item">
+                        new<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        2021<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        automatic<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        petrol<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        183mph<i class="fas fa-circle"></i>
+                      </li>
+                    </ul>
+                    <a href="#" class="btn">check out</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="vehicles__card">
+                  <img
+                    src="assets/images/vehicle-3.png"
+                    class="vehicles__img"
+                    alt=""
+                  />
+                  <div class="vehicles__content">
+                    <h3 class="vehicles__title">new model</h3>
+                    <div class="vehicles__price">
+                      price :<span>$62,000</span>
+                    </div>
+                    <ul class="vehicles__list">
+                      <li class="vehicles__item">
+                        new<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        2021<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        automatic<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        petrol<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        183mph<i class="fas fa-circle"></i>
+                      </li>
+                    </ul>
+                    <a href="#" class="btn">check out</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="vehicles__card">
+                  <img
+                    src="assets/images/vehicle-4.png"
+                    class="vehicles__img"
+                    alt=""
+                  />
+                  <div class="vehicles__content">
+                    <h3 class="vehicles__title">new model</h3>
+                    <div class="vehicles__price">
+                      price :<span>$62,000</span>
+                    </div>
+                    <ul class="vehicles__list">
+                      <li class="vehicles__item">
+                        new<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        2021<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        automatic<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        petrol<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        183mph<i class="fas fa-circle"></i>
+                      </li>
+                    </ul>
+                    <a href="#" class="btn">check out</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="vehicles__card">
+                  <img
+                    src="assets/images/vehicle-5.png"
+                    class="vehicles__img"
+                    alt=""
+                  />
+                  <div class="vehicles__content">
+                    <h3 class="vehicles__title">new model</h3>
+                    <div class="vehicles__price">
+                      price :<span>$62,000</span>
+                    </div>
+                    <ul class="vehicles__list">
+                      <li class="vehicles__item">
+                        new<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        2021<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        automatic<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        petrol<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        183mph<i class="fas fa-circle"></i>
+                      </li>
+                    </ul>
+                    <a href="#" class="btn">check out</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="vehicles__card">
+                  <img
+                    src="assets/images/vehicle-6.png"
+                    class="vehicles__img"
+                    alt=""
+                  />
+                  <div class="vehicles__content">
+                    <h3 class="vehicles__title">new model</h3>
+                    <div class="vehicles__price">
+                      price :<span>$62,000</span>
+                    </div>
+                    <ul class="vehicles__list">
+                      <li class="vehicles__item">
+                        new<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        2021<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        automatic<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        petrol<i class="fas fa-circle"></i>
+                      </li>
+                      <li class="vehicles__item">
+                        183mph<i class="fas fa-circle"></i>
+                      </li>
+                    </ul>
+                    <a href="#" class="btn">check out</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- services -->
+      <section id="services" class="services">
+        <div class="container">
+          <h2 class="heading">our <span>services</span></h2>
+          <div
+            x-data="{ cards: [
+                { id: 1,img:'fas fa-car',title: 'Parts Repair',desc:'Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Corporis, Nisi.'},
+                { id: 2,img:'fas fa-tools',title: 'Car Selling',desc:'Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Corporis, Nisi.'},
+                { id: 3,img:'fas fa-car-crash',title: 'Car Insurance',desc:'Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Corporis, Nisi.'},
+                { id: 4,img:'fas fa-car-battery',title: 'Battery Replacement',desc:'Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Corporis, Nisi.'},
+                { id: 5,img:'fas fa-gas-pump',title: 'Oil Change',desc:'Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Corporis, Nisi.'},
+                { id: 6,img:'fas fa-headset',title: '24/7 Support',desc:'Lorem, Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Corporis, Nisi.'}
+             ]}"
+            class="cards"
+          >
+            <template x-for="card in cards" :key="card.id">
+              <div class="card">
+                <i :class="card.img"></i>
+                <h3 x-text="card.title" class="card__title"></h3>
+                <p x-text="card.desc" class="card__desc"></p>
+                <a href="#" class="card__btn btn">Read More</a>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Cars -->
+      <section id="featured" class="feature">
+        <div class="container">
+          <h2 class="heading"><span>Featured</span> Cars</h2>
+          <!-- First Slide -->
+          <div class="swiper feature-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="feature__card">
+                  <img
+                    src="assets/images/car-1.png"
+                    class="feature__img"
+                    alt="new model"
+                  />
+                  <div class="feature__content">
+                    <h3 class="feature__title">new model</h3>
+                    <div class="feature__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="feature__price">$55,000</div>
+                    <a href="#" class="feature__btn btn">check out</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feature__card">
+                  <img
+                    src="assets/images/car-2.png"
+                    class="feature__img"
+                    alt="new model"
+                  />
+                  <div class="feature__content">
+                    <h3 class="feature__title">new model</h3>
+                    <div class="feature__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="feature__price">$55,000</div>
+                    <a href="#" class="feature__btn btn">check out</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feature__card">
+                  <img
+                    src="assets/images/car-3.png"
+                    class="feature__img"
+                    alt="new model"
+                  />
+                  <div class="feature__content">
+                    <h3 class="feature__title">new model</h3>
+                    <div class="feature__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="feature__price">$55,000</div>
+                    <a href="#" class="feature__btn btn">check out</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feature__card">
+                  <img
+                    src="assets/images/car-4.png"
+                    class="feature__img"
+                    alt="new model"
+                  />
+                  <div class="feature__content">
+                    <h3 class="feature__title">new model</h3>
+                    <div class="feature__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="feature__price">$55,000</div>
+                    <a href="#" class="feature__btn btn">check out</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- Second slide -->
+          <div class="swiper feature-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="feature__card">
+                  <img
+                    src="assets/images/car-5.png"
+                    class="feature__img"
+                    alt="new model"
+                  />
+                  <div class="feature__content">
+                    <h3 class="feature__title">new model</h3>
+                    <div class="feature__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="feature__price">$55,000</div>
+                    <a href="#" class="feature__btn btn">check out</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feature__card">
+                  <img
+                    src="assets/images/car-6.png"
+                    class="feature__img"
+                    alt="new model"
+                  />
+                  <div class="feature__content">
+                    <h3 class="feature__title">new model</h3>
+                    <div class="feature__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="feature__price">$55,000</div>
+                    <a href="#" class="feature__btn btn">check out</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feature__card">
+                  <img
+                    src="assets/images/car-7.png"
+                    class="feature__img"
+                    alt="new model"
+                  />
+                  <div class="feature__content">
+                    <h3 class="feature__title">new model</h3>
+                    <div class="feature__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="feature__price">$55,000</div>
+                    <a href="#" class="feature__btn btn">check out</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="feature__card">
+                  <img
+                    src="assets/images/car-8.png"
+                    class="feature__img"
+                    alt="new model"
+                  />
+                  <div class="feature__content">
+                    <h3 class="feature__title">new model</h3>
+                    <div class="feature__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="feature__price">$55,000</div>
+                    <a href="#" class="feature__btn btn">check out</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Subscribe -->
+      <section id="subscribe" class="subscribe">
+        <div class="container">
+          <h2 class="heading"><span>Subscribe</span> For Latest Updates</h2>
+          <div class="subscribe__content">
+            <p class="subscribe__desc">
+              Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
+              Voluptatum, Suscipit.
+            </p>
+            <form action="">
+              <div class="subscribe__field">
+                <input
+                  type="email"
+                  class="subscribe__input"
+                  placeholder="enter your email"
+                />
+                <input
+                  type="submit"
+                  class="subscribe__btn btn"
+                  value="Subscribe"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Review -->
+      <section id="reviews" class="reviews">
+        <div class="container">
+          <h2 class="heading">client's <span>review</span></h2>
+          <div class="swiper review-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="review">
+                  <img
+                    src="assets/images/pic-1.png"
+                    class="review__img"
+                    alt="john deo"
+                  />
+                  <div class="review__content">
+                    <p class="review__text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Ipsam incidunt quod praesentium iusto id autem possimus
+                      assumenda at ut saepe.
+                    </p>
+                    <h3 class="review__name">john deo</h3>
+                    <div class="review__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review">
+                  <img
+                    src="assets/images/pic-2.png"
+                    class="review__img"
+                    alt="john deo"
+                  />
+                  <div class="review__content">
+                    <p class="review__text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Ipsam incidunt quod praesentium iusto id autem possimus
+                      assumenda at ut saepe.
+                    </p>
+                    <h3 class="review__name">john deo</h3>
+                    <div class="review__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review">
+                  <img
+                    src="assets/images/pic-3.png"
+                    class="review__img"
+                    alt="john deo"
+                  />
+                  <div class="review__content">
+                    <p class="review__text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Ipsam incidunt quod praesentium iusto id autem possimus
+                      assumenda at ut saepe.
+                    </p>
+                    <h3 class="review__name">john deo</h3>
+                    <div class="review__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review">
+                  <img
+                    src="assets/images/pic-4.png"
+                    class="review__img"
+                    alt="john deo"
+                  />
+                  <div class="review__content">
+                    <p class="review__text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Ipsam incidunt quod praesentium iusto id autem possimus
+                      assumenda at ut saepe.
+                    </p>
+                    <h3 class="review__name">john deo</h3>
+                    <div class="review__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review">
+                  <img
+                    src="assets/images/pic-5.png"
+                    class="review__img"
+                    alt="john deo"
+                  />
+                  <div class="review__content">
+                    <p class="review__text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Ipsam incidunt quod praesentium iusto id autem possimus
+                      assumenda at ut saepe.
+                    </p>
+                    <h3 class="review__name">john deo</h3>
+                    <div class="review__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review">
+                  <img
+                    src="assets/images/pic-6.png"
+                    class="review__img"
+                    alt="john deo"
+                  />
+                  <div class="review__content">
+                    <p class="review__text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Ipsam incidunt quod praesentium iusto id autem possimus
+                      assumenda at ut saepe.
+                    </p>
+                    <h3 class="review__name">john deo</h3>
+                    <div class="review__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact__row">
+            <div class="contact__map-wrapper">
+              <iframe
+                class="map"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25905.073677568857!2d51.4939955!3d35.7475059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1656708278873!5m2!1sen!2s"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="contact__form">
+              <h3 class="contact__form-title">Get In Touch</h3>
+              <form action="#">
+                <div class="contact__form-field">
+                  <input
+                    type="text"
+                    class="contact__form-input"
+                    placeholder="your name"
+                  />
+                </div>
+                <div class="contact__form-field">
+                  <input
+                    type="email"
+                    class="contact__form-input"
+                    placeholder="your email"
+                  />
+                </div>
+                <div class="contact__form-field">
+                  <input
+                    type="text"
+                    class="contact__form-input"
+                    placeholder="subject"
+                  />
+                </div>
+                <div class="contact__form-field">
+                  <textarea
+                    class="contact__form-input"
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="your message"
+                  ></textarea>
+                </div>
+                <div class="contact__form-field">
+                  <input type="submit" class="btn" value="send message" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__col">
+            <h4 class="footer__title">Our Branches</h4>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <i class="fas fa-map-marker-alt"></i> iran
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <i class="fas fa-map-marker-alt"></i> canada
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <i class="fas fa-map-marker-alt"></i> USA
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <i class="fas fa-map-marker-alt"></i> germany
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <i class="fas fa-map-marker-alt"></i> France
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">quick links</h4>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#home" class="footer__link">
+                  <i class="fas fa-arrow-right"></i> home
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#vehicles" class="footer__link">
+                  <i class="fas fa-arrow-right"></i> vehicles
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#services" class="footer__link">
+                  <i class="fas fa-arrow-right"></i> services
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#featured" class="footer__link">
+                  <i class="fas fa-arrow-right"></i> featured
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#reviews" class="footer__link">
+                  <i class="fas fa-arrow-right"></i> reviews
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#contact" class="footer__link">
+                  <i class="fas fa-arrow-right"></i> contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">contact info</h4>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <i class="fas fa-phone"></i> +98 9129323358</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <i class="fas fa-envelope"></i> e.saadat72@gmail.com</a
+                >
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">
+                  <i class="fas fa-map-marker-alt"></i> Iran,Tehran</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">contact info</h4>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a
+                  href="https://github.com/eslamsaadat"
+                  target="_blank"
+                  class="footer__link"
+                >
+                  <i class="fab fa-github"></i> github
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" target="_blank" class="footer__link">
+                  <i class="fab fa-instagram"></i> instagram
+                </a>
+              </li>
+              <li class="footer__item">
+                <a
+                  href="https://www.linkedin.com/in/eslamsaadat"
+                  target="_blank"
+                  class="footer__link"
+                >
+                  <i class="fab fa-linkedin"></i> linkedin
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          developed by <span>Eslam Saadat (Iman)</span> and designed by
+          <span>mr. web designer</span>
+        </div>
+      </div>
+    </footer>
+    <!-- Swiper Js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!--Alpine Js  -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

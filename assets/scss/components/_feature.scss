@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+.feature{
+
+  &__card{
+    border: $border;
+    box-shadow: $box-shadow;
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+  }
+
+  &__img{
+    height: 14rem;
+    margin: 0 auto;
+  }
+
+  &__title{
+    color: $black;
+    font-size: 2.2rem;
+  }
+
+  &__stars{
+    padding: 1rem 0;
+    i{
+     color: $yellow;
+     font-size:1.6rem;
+    }
+  }
+  &__price{
+   font-size: 2.4rem;
+   color: $black;
+   margin-bottom: 1rem;
+  }
+  .swiper .swiper-slide{
+    padding: 0 .5rem;
+  }
+}

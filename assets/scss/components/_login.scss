@@ -1,0 +1,83 @@
+@use '../abstracts' as *;
+
+.login{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(255,255,255,.9);
+  z-index: 12;
+  display: none;
+  -webkit-animation: fadeIn 0.4s linear;
+  animation: fadeIn 0.4s linear;
+  &.show{
+    @include flex(center,center);
+  }
+  &__close-icon{
+    position: absolute;
+    top: 1rem;
+    right: 2.5rem;
+    color: $black;
+    font-size: 3.8rem;
+  }
+  &__content{
+    width: 42rem;
+    box-shadow: $box-shadow;
+    border:$border;
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  &__title{
+    text-transform: capitalize;
+    margin-bottom: 1.6rem;
+    font-size: 2.4rem;
+  }
+  &__field{
+    margin-bottom: 1.6rem;
+    P{
+      color: $gray;
+      font-size: 1.4rem;
+      text-transform: capitalize;
+    }
+    a{
+      color: $yellow;
+      position: relative;
+      &::after{
+        content: '';
+        background-color: $yellow;
+        width: 0;
+        display: block;
+        left: 0;
+        height: .2rem;
+        position: absolute;
+        transition: .3s linear;
+      }
+      &:hover{
+        &::after{
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__input{
+    width: 100%;
+    font-size: 1.7rem;
+    color: $black;
+    border: $border;
+    padding: 1rem;
+    border-radius: .5rem;
+  }
+  &__btns{
+    margin-bottom: 1.6rem;
+    @include flex(space-between,center);
+    .btn{
+      margin: 0 0.4rem;
+      width: 100%;
+    }
+  }
+  &__btn{
+    width: 100%;
+  }
+}

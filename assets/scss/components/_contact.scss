@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+.contact {
+  padding: 4rem 0;
+  &__row {
+    @include flex(space-between,stretch);
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__map-wrapper,
+  &__form {
+    flex: 1 1 40rem;
+    border: $border;
+    box-shadow: $box-shadow;
+    padding: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    .map {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__form-title{
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    color: $black;
+  }
+  &__form-field{
+    margin-bottom: 1.5rem;
+  }
+  &__form-input{
+    width: 100%;
+    border: $border;
+    border-radius: .5rem;
+    padding: 1rem;
+    color: $gray;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    resize: none;
+  }
+}
